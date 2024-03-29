@@ -1,6 +1,6 @@
 # Don't Care
 
-<img src="images/logo.jpg" alt="Team Logo" width="500" height="400">
+<img src="images/logo.jpg" alt="Team Logo" width="500" height="500">
 
 ## Team Members:
 - **Team Lead:** Vishnu Sudheer
