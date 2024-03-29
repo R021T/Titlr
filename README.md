@@ -70,12 +70,12 @@ An online hosted PostgreSQL database is used to store the data extracted through
 
 ## Where to Look
 
-• Refer the 'views.py' file in the LLM folder to get a well documented code of the backend.
-• Refer the 'templates' folder to see the HTML pages developed for this project.
-• Refer the 'media' folder to view sample dataset and the excel sheet generated for it.
-• Refer the '.env' file to know the list of environment variables and API keys required to run this code.
-• Install the requirements.txt using the command 'pip install -r requirements.txt'.
-• Run the project using the command 'py manage.py runserver'
+- Refer the 'views.py' file in the LLM folder to get a well documented code of the backend.
+- Refer the 'templates' folder to see the HTML pages developed for this project.
+- Refer the 'media' folder to view sample dataset and the excel sheet generated for it.
+- Refer the '.env' file to know the list of environment variables and API keys required to run this code.
+- Install the requirements.txt using the command 'pip install -r requirements.txt'.
+- Run the project using the command 'py manage.py runserver'
 
 Regards,
 
