@@ -63,10 +63,10 @@ The downloaded .xlsx file can be viewed on any excel sheet view supported platfo
 Thus our project, Titlr brings forth a seamless integration of AI, Prompt engineering, Web development and Database management to provide the user with the best results for a variety of datasets.
 
 ## Technology Stack
-The project the built using the Django Model-View-Template(MVT) Architecture for full stack web development.
-Tesseract module is being used for text detection from images.
-Google Gemini 1.0 Pro API is used for prompting.
-An online hosted PostgreSQL database is used to store the data extracted through prompts.
+- The project the built using the Django Model-View-Template(MVT) Architecture for full stack web development.
+- Tesseract module is being used for text detection from images.
+- Google Gemini 1.0 Pro API is used for prompting.
+- An online hosted PostgreSQL database is used to store the data extracted through prompts.
 
 ## Where to Look
 
