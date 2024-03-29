@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import FileResponse
 from django.conf import settings
 import os
 import pytesseract as pyt
@@ -7,6 +8,7 @@ import google.generativeai as genai
 from .models import *
 import time
 from dotenv import load_dotenv
+from openpyxl import Workbook
 
 load_dotenv()
 
@@ -16,6 +18,21 @@ def home(request):
 
 def upload(request):
     files=[]
+    
+    #Remove previous dataset
+    folder_path='media/dataset'
+    # Check if the folder exists
+    if os.path.exists(folder_path) and os.path.isdir(folder_path):
+        # Get a list of all files in the folder
+        files=os.listdir(folder_path)
+        
+        # Check if the folder is not empty
+        if files:
+            # Iterate over each file and delete it
+            for file_name in files:
+                file_path=os.path.join(folder_path, file_name)
+                os.remove(file_path)
+    
     if request.method == 'POST':
         # Access uploaded files
         uploaded_files = request.FILES.getlist('file')  # Access all uploaded files as a list
@@ -64,7 +81,7 @@ def upload(request):
         if Output.objects.exists():
             Output.objects.all().delete()
 
-        #passing pages one by one to the llm for prompting
+        #passing pngs one by one to the llm for prompting
         i=1
         for path in files:
             content=pyt.image_to_string(Image.open(path))
@@ -90,3 +107,18 @@ def upload(request):
     else:
         error = "Upload PDF"
         return render(request,'error.html',{'error':error})
+
+def create(request):
+    data=Output.objects.all()
+    
+    wb=Workbook()
+    ws=wb.active
+
+    ws.append(['S No.','Document Title','Author(s)','Generated Title'])
+    for i in data:
+        ws.append([i.id,i.title,i.authors,i.alt])
+
+    file_path = os.path.join(settings.MEDIA_ROOT,'excel','titlr.xlsx')
+
+    wb.save(file_path)
+    return render(request,'download.html')
