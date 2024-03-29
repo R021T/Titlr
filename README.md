@@ -16,4 +16,4 @@ Once the text is extracted, the system analyzes it using Gemini 1.0 Pro API, a p
 Finally, you have the flexibility to view the extracted information directly on the website or download it as an Excel sheet for further manipulation and analysis. This allows you to easily access the key details of your research paper and potentially discover a new, interesting title for it.
 
 ## System Architecture:
-<img src="images/system.jpg" alt="System Architecture" width="500" height="500">
+<img src="images/system.png" alt="System Architecture" width="500" height="500">
