@@ -21,35 +21,44 @@ Finally, you have the flexibility to view the extracted information directly on 
 ## Work Flow
 
 The landing page of the website is given below. It contains a brief description of the project and also gives the user the option to upload a folder containing the dataset to be processed.
-<img src="images/home.png" alt="Home Page" width="250" height="125">
+
+<img src="images/home.png" alt="Home Page" width="500" height="250">
 
 The upload button gives the user the option to choose the specified folder containing dataset images as depicted below.
-<img src="images/upload.png" alt="Home Page" width="250" height="125">
+
+<img src="images/upload.png" alt="Home Page" width="500" height="250">
 
 If there is any error during upload it is displayed to the user.
-<img src="images/error.png" alt="Error Page" width="250" height="125">
+
+<img src="images/error.png" alt="Error Page" width="500" height="250">
 
 The uploaded folder is split into individual png files and stored in the dataset folder within the media directory of the project.
+
 <img src="images/dataset.png" alt="Dataset" width="250" height="250">
 
 The processing of the dataset takes place inside the upload() function in the views.py file within the LLM folder of the project.
 The images are parsed one by one and passed to the OCR module of the project and the text extracted by it to the Gemini API via prompts.
 LLM returns the title of the content, list of authors and an alternate title apt for the content.
 These values are then stored in the database.
-<img src="images/database.png" alt="Database" width="250" height="125">
+
+<img src="images/database.png" alt="Database" width="500" height="250">
 
 Further on this data is integrated into the frontend to display the output in the specified format to the users.
-<img src="images/display.png" alt="Display" width="250" height="125">
+
+<img src="images/display.png" alt="Display" width="500" height="250">
 
 The user is also provided with an option to create an Excel sheet format of the output being displayed by the click of a button.
-<img src="images/create.png" alt="Create" width="250" height="125">
+
+<img src="images/create.png" alt="Create" width="500" height="250">
 
 The excel sheet is created in the excel folder within the media directory of the project.
 The user now gets the option to download the excel file onto his/her local system.
-<img src="images/download.png" alt="Download" width="250" height="125">
+
+<img src="images/download.png" alt="Download" width="500" height="250">
 
 The downloaded .xlsx file can be viewed on any excel sheet view supported platforms.
-<img src="images/excel.png" alt="Excel" width="250" height="125">
+
+<img src="images/excel.png" alt="Excel" width="500" height="250">
 
 Thus our project, Titlr brings forth a seamless integration of AI, Prompt engineering, Web development and Database management to provide the user with the best results for a variety of datasets.
 
