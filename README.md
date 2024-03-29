@@ -78,4 +78,5 @@ An online hosted PostgreSQL database is used to store the data extracted through
 • Run the project using the command 'py manage.py runserver'
 
 Regards,
+
 Team Don't Care.
