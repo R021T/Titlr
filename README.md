@@ -1,6 +1,6 @@
 # Don't Care
 
-![Team Logo](images/logo.png)
+![Team Logo](images/logo.jpg)
 
 ## Team Members:
 - **Team Lead:** Vishnu Sudheer
